@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form</title>
+  </head>
+
+  <body>
+    <form>
+      <fieldset style="background-color: bisque">
+        <legend style="background-color: orange; color: darkred">
+          <strong>Personal Data</strong>
+        </legend>
+        <fieldset style="background-color: darksalmon">
+          <legend style="background-color: darkred; color: orange">
+            <strong>Your Name</strong>
+          </legend>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <label for="first-name">First Name</label>
+                </td>
+                <td>:</td>
+                <td>
+                  <input
+                    type="text"
+                    autocomplete="on"
+                    id="first-name"
+                    name="first-name"
+                    placeholder="ex. Hussein"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="second-name">Second Name</label></td>
+                <td>:</td>
+                <td>
+                  <input
+                    type="text"
+                    autocomplete="on"
+                    id="second-name"
+                    name="second-name"
+                    placeholder="ex. Mahmoud"
+                    required
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+        <br />
+        <table>
+          <tbody>
+            <tr>
+              <td><label for="phone">Your Phone</label></td>
+              <td>:</td>
+              <td>
+                <input
+                  type="tel"
+                  autocomplete="on"
+                  id="phone"
+                  name="phone"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="email">Email</label>
+              </td>
+              <td>:</td>
+              <td>
+                <input
+                  type="email"
+                  autocomplete="on"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="pass">Password</label>
+              </td>
+              <td>:</td>
+              <td><input type="password" id="pass" name="pass" required /></td>
+            </tr>
+            <tr>
+              <td><label for="re-pass">Re-Password</label></td>
+              <td>:</td>
+              <td>
+                <input type="password" id="re-pass" name="re-pass" required />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br /><br />
+        <input type="radio" id="male" name="gender" value="m" required />
+        <label for="male">Male</label>
+        <br />
+        <input type="radio" id="female" name="gender" value="f" required />
+        <label for="female">Female</label>
+        <br /><br />
+        <input type="checkbox" id="student" name="edu" value="s" required />
+        <label for="student">Student</label>
+        <br />
+        <input type="checkbox" id="graduated" name="edu" value="g" required />
+        <label for="graduated">Graduated</label>
+        <br /><br />
+        <select name="options" id="options">
+          <optgroup label="Group 1">
+            <option value="1.1" selected>Option 1.1</option>
+          </optgroup>
+          <optgroup label="Group 2">
+            <option value="2.1">Option 2.1</option>
+            <option value="2.2">Option 2.2</option>
+          </optgroup>
+          <optgroup label="Group 3" disabled>
+            <option value="3.1">Option 3.1</option>
+            <option value="3.2">Option 3.2</option>
+            <option value="3.3">Option 3.3</option>
+          </optgroup>
+        </select>
+        <br /><br />
+        <input
+          type="image"
+          src="images/submit-button.png"
+          alt="Submit"
+          width="96"
+        />
+      </fieldset>
+    </form>
+  </body>
+</html>
