@@ -1,0 +1,780 @@
+:root {
+  --nav-bar-h: 60px;
+  --logo-fs: 24px;
+  --nav-link-fs: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #555;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: #333;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+a:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: #ff305b;
+  font: inherit;
+  color: #fff;
+  padding: 10px 24px;
+  transition: all 0.5s;
+  vertical-align: top;
+}
+
+.btn:hover {
+  background-color: #f00;
+}
+
+.btn:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+.btn:active {
+  text-decoration: none;
+  background-color: #c00;
+  transform: scale(0.9);
+}
+
+.btn i {
+  margin-left: 5px;
+}
+
+.social {
+  display: flow-root;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.social .icon {
+  float: left;
+  padding: 10px 12px;
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.25s;
+}
+
+.social .icon:hover {
+  color: #ff305b;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container h2 {
+  font-size: 40px;
+  text-align: center;
+  padding: 0 15px 30px;
+  position: relative;
+  line-height: 0.75;
+  font-weight: 700;
+  margin: 0 0 40px;
+}
+
+.container h2::before,
+.container h2::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container h2::before {
+  height: 11px;
+  width: 70px;
+  bottom: 0;
+  border-top: 1px solid #ff305b;
+  border-bottom: 1px solid #ff305b;
+}
+
+.container h2::after {
+  height: 1px;
+  width: 160px;
+  bottom: 5px;
+  background-color: #ff305b;
+}
+
+.section {
+  scroll-margin-top: var(--nav-bar-h);
+}
+
+.nav-bar {
+  display: flow-root;
+  color: #fff;
+  background-color: #000c;
+  position: fixed;
+  height: var(--nav-bar-h);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.nav-bar.hidden {
+  transform: translateY(-100%);
+}
+
+.nav-bar.bg-dark {
+  background-color: #333;
+}
+
+.nav-bar .logo {
+  float: left;
+  font-weight: 700;
+  font-size: var(--logo-fs);
+  padding-top: calc((var(--nav-bar-h) - var(--logo-fs)) / 2.15);
+}
+
+.nav-bar .nav-menu {
+  float: right;
+  font-weight: 300;
+  font-size: var(--nav-link-fs);
+  padding-top: calc((var(--nav-bar-h) - var(--nav-link-fs)) / 2.15);
+}
+
+.nav-bar .nav-menu .nav-link {
+  display: inline-block;
+  margin-left: 16px;
+  color: #fff;
+  transition: all 0.35s;
+}
+
+.nav-bar .logo,
+.nav-bar .nav-menu .nav-link.active,
+.nav-bar .nav-menu .nav-link:hover {
+  color: #ff305b;
+}
+
+.home {
+  background-image: url(../images/hero-img.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000c;
+}
+
+.home .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.home .pre-head {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.home h1 {
+  color: #ff305b;
+  font-size: 70px;
+  font-weight: 900;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.home p {
+  font-size: 26px;
+  font-weight: 300;
+  margin: 0 0 10px;
+}
+
+.about {
+  padding: 100px 0 125px;
+}
+
+.about .container {
+  display: flow-root;
+}
+
+.about .image-container,
+.about .content {
+  width: 42%;
+  float: left;
+}
+
+.about .image-container img {
+  width: 100%;
+}
+
+.about .image-frame {
+  width: 70%;
+  margin-left: auto;
+  position: relative;
+}
+
+.about .image-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 8px solid #555;
+}
+
+.about .image-frame::before,
+.about .image {
+  border-radius: 8px;
+}
+
+.about .image {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  overflow: hidden;
+}
+
+.about .image .overlay {
+  background-color: #000a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.5s;
+}
+
+.about .image:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about .image .overlay .social {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about .content {
+  width: 50%;
+  padding-left: 8%;
+}
+
+.about .content h2 {
+  text-align: left;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 0.65;
+  padding: 0 0 0 13px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.about .content h2::before,
+.about .content h2::after {
+  display: none;
+}
+
+.about .content h2::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #ff305b;
+}
+
+.about .content h2,
+.about .content p {
+  margin: 0 0 25px;
+}
+
+.about .content p {
+  padding-bottom: 25px;
+  border-bottom: 1px dashed #333;
+}
+
+.about .content ul {
+  display: flow-root;
+}
+
+.about .content ul li {
+  width: 50%;
+  margin-bottom: 25px;
+}
+
+.about .content ul li:nth-child(odd) {
+  float: left;
+}
+
+.about .content ul li:nth-child(even) {
+  float: right;
+}
+
+.about .content ul li a {
+  color: #7e7e7e;
+}
+
+.about .content ul li span {
+  font-weight: 500;
+  color: #333;
+}
+
+.services {
+  background-color: #f1f1f1;
+  padding: 100px 0 54px;
+  text-align: center;
+}
+
+.services .cards {
+  display: flow-root;
+  padding: 0 15px;
+}
+
+.services .card {
+  width: 25%;
+  float: left;
+  box-sizing: border-box;
+  padding: 40px 15px;
+  border-radius: 3px;
+}
+
+.services .card h3,
+.services .card p {
+  margin: 0;
+}
+
+.services .card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.services .card i {
+  display: block;
+  width: 100%;
+  font-size: 36px;
+  color: #ff305b;
+  margin-bottom: 20px;
+}
+
+.services .card,
+.services .card i {
+  transition: all 0.5s;
+}
+
+.services .card:hover {
+  background-color: #fff;
+  box-shadow: 0 10px 25px 0 #3333;
+}
+
+.services .card:hover i {
+  transform: scale(1.2);
+}
+
+.portfolio {
+  padding: 100px 0 70px;
+  text-align: center;
+}
+
+.portfolio .filter-buttons {
+  margin-bottom: 50px;
+  padding: 0 15px;
+}
+
+.portfolio .filter-buttons button {
+  background-color: transparent;
+  padding: 3px 12px;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: #333;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.portfolio .filter-buttons button:hover {
+  color: #ff305b;
+}
+
+.portfolio .filter-buttons button:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+.portfolio .filter-buttons button:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+.portfolio .filter-buttons .active {
+  color: #ff305b;
+}
+
+.portfolio .gallery {
+  display: flow-root;
+}
+
+.portfolio .gallery .item {
+  width: 33.3333333%;
+  float: left;
+  box-sizing: border-box;
+  padding: 0 15px 15px;
+  position: relative;
+}
+
+.portfolio .gallery .item a,
+.portfolio .gallery .item i {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.portfolio .gallery .item a {
+  top: 0;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  background-color: #000;
+}
+
+.portfolio .gallery .item i {
+  right: 30px;
+  bottom: 30px;
+  font-size: 24px;
+  color: #ff305b;
+}
+
+.portfolio .gallery .item:hover a {
+  opacity: 0.5;
+}
+
+.portfolio .gallery .item:hover i {
+  opacity: 1;
+}
+
+.portfolio .gallery .item img {
+  width: 100%;
+}
+
+.quantities {
+  background-color: #f1f1f1;
+  padding: 100px 0;
+}
+
+.quantities .container {
+  display: flow-root;
+  text-align: center;
+}
+
+.quantities .quantity {
+  float: left;
+  width: 25%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.quantities .quantity i {
+  display: block;
+  width: 100%;
+  font-size: 25px;
+  color: #ff305b;
+  margin-bottom: 12px;
+}
+
+.quantities .quantity h3 {
+  margin: 0;
+}
+
+.quantities .quantity h3 .count {
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.quantities .quantity h3 .name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+}
+
+.testimonial {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.testimonial .feedback {
+  padding: 0 15px;
+}
+
+.testimonial .feedback .card {
+  background: linear-gradient(135deg, #ff305b, #ff305b 20%, #f1f1f1 20%);
+  max-width: 750px;
+  padding: 40px;
+  margin: 0 auto;
+  display: flow-root;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.testimonial .feedback .card div {
+  float: left;
+}
+
+.testimonial .feedback .card .image {
+  width: 20%;
+  margin-top: 15px;
+}
+
+.testimonial .feedback .card img {
+  width: 80%;
+  border-radius: 50%;
+}
+
+.testimonial .feedback .card .content {
+  box-sizing: border-box;
+  padding-left: 15px;
+  width: 80%;
+  text-align: left;
+}
+
+.testimonial .feedback .card .content h3,
+.testimonial .feedback .card .content p,
+.testimonial .feedback .card .content a,
+.testimonial .feedback .card .content .rate {
+  margin: 0 0 10px;
+}
+
+.testimonial .feedback .card .content h3 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.testimonial .feedback .card .content a {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #777;
+}
+
+.testimonial .feedback .card .content .rate i {
+  color: #f1c30d;
+}
+
+.testimonial .feedback .nav {
+  padding: 5px 15px;
+}
+
+.testimonial .feedback .nav button {
+  background-color: transparent;
+  border: 1px solid #ff305b;
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.testimonial .feedback .nav button.active {
+  background-color: #ff305b;
+  width: 25px;
+}
+
+.testimonial .feedback .nav button:focus {
+  outline: none;
+  box-shadow: 0 0 2px 1px #3337;
+}
+
+.testimonial .feedback .nav button:hover {
+  transform: scale(1.5);
+}
+
+.testimonial .feedback .nav button:active {
+  transform: scale(1.2);
+}
+
+.blog {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 100px 0 70px;
+}
+
+.blog .posts {
+  display: flow-root;
+}
+
+.blog .posts .post-wrapper {
+  box-sizing: border-box;
+  width: 33.3333333%;
+  padding: 0 15px;
+  float: left;
+}
+
+.blog .posts .post-wrapper .post {
+  text-align: left;
+  background-color: #fff;
+}
+
+.blog .posts .post-wrapper .post .content {
+  padding: 20px;
+}
+
+.blog .posts .post-wrapper .post .date {
+  margin-bottom: 10px;
+}
+
+.blog .posts .post-wrapper .post h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.blog .posts .post-wrapper .post a {
+  color: #333;
+}
+
+.blog .posts .post-wrapper .post img,
+.blog .posts .post-wrapper .post iframe {
+  width: 100%;
+  aspect-ratio: 3 / 1.7;
+  background-color: #000;
+}
+
+.contact {
+  padding: 100px 0;
+}
+
+.contact .container {
+  max-width: 780px;
+}
+
+.contact form {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0 15px;
+  color: #555;
+}
+
+.contact form input,
+.contact form textarea {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  padding: 6px 12px;
+  min-height: 40px;
+  font: inherit;
+  width: 100%;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  color: #999;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 3px 1px #3333;
+}
+
+.contact form input:focus:invalid,
+.contact form textarea:focus:invalid,
+.contact form input:user-invalid,
+.contact form textarea:user-invalid {
+  border-color: #ff305b;
+}
+
+.contact form textarea {
+  min-height: 96px;
+  resize: none;
+  overflow: auto;
+}
+
+.contact form .info {
+  display: flow-root;
+}
+
+.contact form .info input {
+  width: 48%;
+}
+
+.contact form .info input[name="name"] {
+  float: left;
+}
+
+.contact form .info input[name="email"] {
+  float: right;
+}
+
+.footer {
+  background-color: #333;
+  padding: 50px 0;
+}
+
+.footer .container {
+  color: #fff;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #ff305b;
+}
