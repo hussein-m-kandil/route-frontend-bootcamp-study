@@ -1,0 +1,354 @@
+ul {
+  padding: 0;
+}
+
+main > [id] {
+  padding: 6rem 0 4rem;
+}
+
+#main-nav {
+  --bs-navbar-color: var(--bs-navbar-active-color);
+  --bs-navbar-hover-color: var(--bs-navbar-color);
+  --bs-navbar-toggler-focus-width: 1px;
+  transition: all 0.25s ease-out;
+  padding: 0.5rem 0;
+}
+
+#main-nav .container {
+  padding: 0 0.75rem;
+}
+
+#main-nav .navbar-brand {
+  letter-spacing: 1px;
+  font-size: 1.75rem !important;
+}
+
+#main-nav .navbar-toggler {
+  font-size: 1.75rem;
+  line-height: 0;
+}
+
+#main-nav .dropdown i {
+  font-size: 0.75rem;
+  margin-left: 0.3rem;
+}
+
+#main-nav .dropdown-toggle::after {
+  content: normal;
+}
+
+#main-nav .dropdown-menu {
+  --bs-dropdown-link-hover-color: var(--bs-primary);
+  --bs-dropdown-link-active-color: var(--bs-light);
+  --bs-dropdown-link-active-bg: var(--bs-primary);
+  --bs-dropdown-link-hover-bg: transparent;
+}
+
+#main-nav .nav-item {
+  padding: 10px 0 10px 30px;
+}
+
+#main-nav .nav-link {
+  display: inline-block;
+  position: relative;
+  letter-spacing: 0.4px;
+}
+
+#main-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -7px;
+  height: 2px;
+  background-color: #fff;
+  transition: right 0.25s ease-in-out;
+}
+
+#main-nav .active::before {
+  right: 20%;
+}
+
+body:has([href="#home"].active) #main-nav {
+  --bs-bg-opacity: 0.9;
+  padding: 1rem 0;
+}
+
+.fs-emphasis {
+  font-size: 1.1rem;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100px;
+  height: 3px;
+  background-color: var(--bs-primary);
+}
+
+.home {
+  background: linear-gradient(#0008, #0008), url("../images/hero-bg.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.home .title {
+  font-size: 2rem;
+}
+
+.home .description {
+  font-size: 1rem;
+}
+
+.subtle-shadow {
+  box-shadow: 0 12px 5px -7px #aaa3;
+}
+
+.hard-shadow-sm {
+  box-shadow: 0 2px 3px 1px #0002;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+}
+
+.about > .container > .row {
+  padding: 4rem 0.5rem 4.5rem;
+}
+
+.about .progress {
+  margin: 0.5rem 0 1.1rem;
+  height: 0.7rem;
+  border-radius: 0;
+  background-color: rgba(var(--bs-primary-rgb), 0.2);
+}
+
+.sec-head .title {
+  font-size: 2rem;
+}
+
+.hr-narrow {
+  width: 2.5rem;
+  height: 0.3rem;
+  margin: 0 auto;
+  background-color: var(--bs-primary);
+}
+
+.fs-7 {
+  font-size: 0.8rem;
+}
+
+.circle {
+  --circle-diameter: 7rem;
+  --border-width: 0.65rem;
+  width: calc(var(--circle-diameter) + var(--border-width));
+  height: calc(var(--circle-diameter) + var(--border-width));
+  margin: 0 auto;
+  border-radius: 50%;
+  transition: 0.35s ease-in-out;
+  border: var(--border-width) solid var(--bs-primary);
+}
+
+.services .service-card:hover .circle {
+  border-color: var(--bs-primary-bg-subtle);
+  background-color: var(--bs-primary);
+  color: var(--bs-light);
+}
+
+.counters {
+  background: linear-gradient(
+      rgba(var(--bs-primary-rgb), 0.7),
+      rgba(var(--bs-primary-rgb), 0.7)
+    ),
+    url("../images/counters-bg.jpg");
+  background-position: center 35%;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 2rem;
+}
+
+.counters .circle {
+  --circle-diameter: 4.5rem;
+  border-color: rgba(var(--bs-light-rgb), 0.75);
+}
+
+.work .work-card .img img {
+  width: 100%;
+  transition: transform 0.75s ease-out;
+}
+
+.work .work-card .img:hover img {
+  transform: scale(1.3);
+}
+
+.work .work-card .title {
+  font-size: 1.2rem;
+}
+
+.testimonial {
+  --swiper-pagination-color: var(--bs-light);
+  --swiper-pagination-bullet-size: 0.75rem;
+  --swiper-pagination-bullet-inactive-color: var(--bs-light);
+  --swiper-pagination-bullet-inactive-opacity: 0.4;
+  padding: 8rem 0;
+}
+
+.testimonial .container {
+  max-width: 920px;
+}
+
+.testimonial,
+.contact {
+  background: linear-gradient(
+      rgba(var(--bs-primary-rgb), 0.7),
+      rgba(var(--bs-primary-rgb), 0.7)
+    ),
+    url("../images/overlay-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.blog .card-title {
+  font-size: 1.3rem;
+}
+
+.blog a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.5s ease-out;
+}
+
+.blog a:hover {
+  color: var(--bs-primary);
+}
+
+.blog .position-absolute {
+  padding: 0.3rem 0.9rem 0.5rem;
+  font-size: 0.7rem;
+}
+
+.contact.contact {
+  padding: 8rem 0 3rem;
+}
+
+.contact form input {
+  font-size: 0.85rem;
+}
+
+.contact form button {
+  --bs-btn-hover-bg: #4992ff;
+  --bs-btn-hover-border-color: #3f86f0;
+  transition: all 0.25s ease-out;
+}
+
+.contact form button:hover {
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), 0.25);
+}
+
+.contact .circle {
+  --circle-diameter: 2.7rem;
+  --border-width: 0.2rem;
+  margin: 0 0.9375rem 0 0;
+}
+
+.contact .circle:hover {
+  border-color: var(--bs-primary-bg-subtle);
+  background-color: var(--bs-primary);
+  color: var(--bs-light);
+}
+
+footer {
+  background: linear-gradient(#0002, #0002),
+    linear-gradient(var(--bs-primary), var(--bs-primary));
+  position: relative;
+  overflow: hidden;
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  filter: drop-shadow(0 3px 4px #3335);
+}
+
+.btt-btn {
+  --bs-btn-bg: #1f79ff;
+  --bs-btn-hover-bg: #4992ff;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0;
+  z-index: 9;
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 1;
+  transition: all 0.35s ease-out;
+}
+
+.btt-btn i {
+  font-size: 1.75rem;
+}
+
+body:has([href="#home"].active) .btt-btn {
+  opacity: 0;
+}
+
+@media (width > 320px) {
+  .home .title {
+    font-size: 3rem;
+  }
+
+  .home .description {
+    font-size: 1.5rem;
+  }
+
+  .sec-head .title {
+    font-size: 3rem;
+  }
+
+  .sub-title {
+    font-size: 2rem;
+  }
+}
+
+@media (width >= 768px) {
+  .about > .container > .row {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .home .title {
+    font-size: 4.5rem;
+  }
+
+  .home .description {
+    font-size: 2.5rem;
+  }
+}
+
+@media (width >= 992px) {
+  #main-nav {
+    padding: 0.75rem 0;
+  }
+
+  #main-nav .nav-link:hover::before {
+    right: 20%;
+  }
+
+  body:has([href="#home"].active) #main-nav {
+    --bs-bg-opacity: 0;
+    padding: 1.3rem 0 1rem;
+  }
+}
