@@ -1,0 +1,84 @@
+:root {
+  --bg-color: #111;
+  --fg-color: #ddd;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  font-family: "Courier New", Courier, monospace;
+  color: var(--fg-color);
+  font-size: 100%;
+}
+
+*::before,
+*::after,
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1024px;
+  text-align: center;
+  padding: 2rem 1rem 0.25rem;
+}
+
+.trigger {
+  padding: 1.25rem 1.75rem;
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 2rem 0;
+  cursor: pointer;
+  color: var(--fg-color);
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  border: 2px solid var(--fg-color);
+  background-color: transparent;
+}
+
+.trigger:focus {
+  outline: none;
+}
+
+.trigger:hover,
+.trigger:focus {
+  box-shadow: 0 0 7px 0 var(--fg-color);
+  text-shadow: 0 0 4px var(--fg-color);
+}
+
+.trigger:active {
+  transform: scale(0.95);
+}
+
+.quote-text {
+  font-weight: 700;
+}
+
+.quote-author {
+  font-style: italic;
+}
+
+@media (width < 250px) {
+  html {
+    font-size: 65%;
+    word-wrap: break-word;
+  }
+
+  body {
+    padding: 1rem 0.25rem 0.25rem;
+  }
+
+  .trigger {
+    padding: 0.5rem 0.75rem;
+    letter-spacing: initial;
+    border-width: 1px;
+  }
+
+  .trigger:hover,
+  .trigger:focus {
+    box-shadow: 0 0 5px 0 var(--fg-color);
+    text-shadow: 0 0 2px var(--fg-color);
+  }
+}

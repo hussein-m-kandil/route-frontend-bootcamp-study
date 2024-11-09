@@ -22,3 +22,4 @@ Projects I built while studying the **Front-End Web Development Bootcamp** at [*
 ### JavaScript
 
 - **Problem Solving** -- [(source)](./js/js-problem-solving/js/index.js)
+- **Random Quote Generator** -- [(source)](./js/random-quote-generator/index.html) [(live)](https://hussein-m-kandil.github.io/route-frontend-bootcamp-study/js/random-quote-generator/index.html)
