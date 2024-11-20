@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Hussein Kandil" />
+    <title>Bookmark</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/bookmark.png"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../../common-dependencies/css/font-awesome-all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/dialog/dialog.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bookmarker</h1>
+      <form>
+        <h2 class="fai">Bookmark your favorite sites</h2>
+        <div>
+          <label for="name" class="fai">Site Name </label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Example Site"
+            autocomplete="on"
+          />
+        </div>
+        <div>
+          <label for="url" class="fai">Site URL </label>
+          <input
+            type="text"
+            id="url"
+            placeholder="https://example.com"
+            autocomplete="on"
+            spellcheck="false"
+          />
+        </div>
+        <button type="button" class="btn" id="submit">Submit</button>
+      </form>
+    </header>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="bookmarks-container"></tbody>
+      </table>
+    </main>
+    <div id="form-error-dialog-body" class="dialog-body">
+      <p>Site Name or Url is not valid, Please follow the rules below:</p>
+      <ul>
+        <li class="fai">
+          Site name must contain at least 3 non-space characters
+        </li>
+        <li class="fai">Site URL must be a valid one</li>
+      </ul>
+    </div>
+    <script src="./assets/dialog/dialog.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

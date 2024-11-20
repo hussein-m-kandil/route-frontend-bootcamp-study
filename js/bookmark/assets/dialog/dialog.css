@@ -1,0 +1,94 @@
+html:has(.dialog) {
+  min-height: 100vh !important;
+  position: relative !important;
+}
+
+.dialog *::before,
+.dialog *::after,
+.dialog *,
+.dialog {
+  box-sizing: border-box;
+}
+
+.dialog {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(var(--dark), 0.5);
+  position: absolute;
+  z-index: 99999999;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.dialog .dialog-content {
+  padding: 1.5rem;
+  text-align: left;
+  max-width: 720px;
+  border-radius: 0.5rem;
+  background-color: rgb(var(--light));
+  box-shadow: 0 0 1.25rem 0 rgba(var(--dark), 0.25);
+}
+
+.dialog .dialog-title-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialog .dialog-title-bar .circles {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.dialog .dialog-title-bar .sm-circle {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+}
+
+.dialog .dialog-title-bar .bg-danger {
+  background-color: #f15f5d;
+}
+
+.dialog .dialog-title-bar .bg-success {
+  background-color: #4db748;
+}
+
+.dialog .dialog-title-bar .bg-warning {
+  background-color: #febe2e;
+}
+
+.dialog .dialog-title-bar .dialog-close-btn {
+  background-color: transparent;
+  padding: 0.375rem 0.75rem;
+  transition: filter 250ms;
+  font-size: 1.5rem;
+  line-height: 1rem;
+  cursor: pointer;
+  color: #333;
+  padding: 0;
+  border: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.dialog .dialog-title-bar .dialog-close-btn::before {
+  content: "᰽";
+}
+
+.dialog .dialog-title-bar .dialog-close-btn:focus-visible,
+.dialog .dialog-title-bar .dialog-close-btn:focus {
+  outline: none;
+  box-shadow: 0 0 3px 1px #497bf2;
+}
+
+.dialog .dialog-title-bar .dialog-close-btn:active {
+  transform: scale(0.95);
+}
