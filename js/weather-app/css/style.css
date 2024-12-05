@@ -1,0 +1,311 @@
+html {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 100%;
+  color: #fff;
+}
+
+*::before,
+*::after,
+* {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 1rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: rgb(0, 50, 100);
+  background-image: url("../assets/images/mountains-1920.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+body,
+main {
+  max-width: 600px;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: xx-large;
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+img {
+  vertical-align: middle;
+}
+
+form.weather-location {
+  background-color: #3337;
+  position: relative;
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+form.weather-location.invalid {
+  border-color: #f00;
+}
+
+form.weather-location.invalid .error {
+  position: absolute;
+  left: 0;
+  top: -1.25rem;
+  font-size: 0.75rem;
+  color: #500;
+}
+
+form.weather-location input.location,
+form.weather-location button.location {
+  background-color: transparent;
+  font: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+form.weather-location input.location:focus,
+form.weather-location button.location:focus {
+  outline: none;
+  box-shadow: 0 0 3px 0 inset #333a;
+}
+
+form.weather-location input.location {
+  width: 50%;
+  flex: 1;
+  text-align: center;
+}
+
+form.weather-location input.location::placeholder {
+  font-size: small;
+  font-weight: lighter;
+  color: #ddd;
+}
+
+form.weather-location button.location {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: transparent;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+form.weather-location button.location:active {
+  background-color: #3337;
+}
+
+.toggler {
+  background-color: #3337;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.75rem;
+}
+
+.toggler button.toggler-choice {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-size: medium;
+  font-weight: normal;
+  color: #aaa;
+  padding: 0.5rem;
+  width: 50%;
+}
+
+.toggler button.toggler-choice.toggler-choice-selected {
+  background-color: #3337;
+  color: #fff;
+}
+
+.toggler button.toggler-choice:first-of-type {
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+
+.toggler button.toggler-choice:last-of-type {
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.toggler button.toggler-choice:focus,
+.toggler button.toggler-choice:hover {
+  outline: none;
+  box-shadow: 0 0 3px 0 inset #0007;
+}
+
+.toggler button.toggler-choice:active {
+  background-color: #0007;
+}
+
+.weather-content {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #3337;
+  border-radius: 1rem;
+  padding: 1rem;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-content .weather-info-error,
+.weather-content .initial-message {
+  text-align: center;
+  font-weight: lighter;
+}
+
+.weather-content .loading-gif {
+  width: auto;
+  height: 50px;
+  opacity: 0.5;
+}
+
+.current-weather {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.current-weather .weather-hero {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.current-weather .weather-hero .current-temp {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.current-weather .weather-hero .condition {
+  font-size: medium;
+  font-weight: lighter;
+}
+
+.current-weather .weather-hero .feels-like {
+  font-size: small;
+  font-weight: lighter;
+}
+
+.current-weather .weather-extras,
+.current-weather .hours-weather {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.current-weather .weather-extras .card,
+.current-weather .hours-weather .card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.current-weather .weather-extras .title,
+.current-weather .hours-weather .title,
+.current-weather .weather-extras .condition,
+.current-weather .hours-weather .condition {
+  font-size: small;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.current-weather .weather-extras .content,
+.current-weather .hours-weather .content {
+  font-weight: bold;
+}
+
+.current-weather .weather-extras {
+  overflow-x: hidden;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.current-weather .weather-extras .card {
+  min-width: 100px;
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #3337;
+}
+
+.current-weather .hours-weather {
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 0.5rem;
+}
+
+.current-weather .hours-weather .card {
+  font-size: small;
+  flex-shrink: 0;
+  min-width: 60px;
+  min-height: 60px;
+  padding: 8px;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  background-color: #3337;
+}
+
+.current-weather .hours-weather .card .title {
+  font-size: x-small;
+}
+
+footer.link-back {
+  text-align: center;
+  font-size: x-small;
+  font-weight: lighter;
+  color: #ddd;
+}
+
+footer.link-back a {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar#adding_a_fallback_for_scrollbar_styles */
+/* Use `::-webkit-scrollbar-*` pseudo-elements */
+@supports selector(::-webkit-scrollbar) {
+  .hours-weather::-webkit-scrollbar {
+    background: #0003;
+  }
+  .hours-weather::-webkit-scrollbar-thumb {
+    background: #3337;
+  }
+}
+
+/* For browsers that support `scrollbar-*` properties */
+@supports (scrollbar-color: auto) {
+  .hours-weather {
+    scrollbar-color: #0003 #3337;
+  }
+}
