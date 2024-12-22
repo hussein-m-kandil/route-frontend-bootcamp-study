@@ -26,3 +26,4 @@ Projects I built while studying the **Front-End Web Development Bootcamp** at [*
 - **Bookmark** -- [(source)](./js/bookmark/index.html) [(live)](https://hussein-m-kandil.github.io/route-frontend-bootcamp-study/js/bookmark/index.html)
 - **Login System** -- [(source)](./js/login-system/index.html) [(live)](https://hussein-m-kandil.github.io/route-frontend-bootcamp-study/js/login-system/index.html)
 - **Weather App** -- [(source)](./js/weather-app/index.html) [(live)](https://hussein-m-kandil.github.io/route-frontend-bootcamp-study/js/weather-app/index.html)
+- **Game Over** -- [(source)](./js/game-over/index.html) [(live)](https://hussein-m-kandil.github.io/route-frontend-bootcamp-study/js/game-over/index.html)

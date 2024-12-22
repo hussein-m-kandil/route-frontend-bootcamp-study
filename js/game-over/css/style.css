@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../../common-dependencies/fonts/Comfortaa/static/Comfortaa-Light.ttf");
+  font-weight: 100 200;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../../common-dependencies/fonts/Comfortaa/static/Comfortaa-Medium.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../../common-dependencies/fonts/Comfortaa/static/Comfortaa-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../../common-dependencies/fonts/Comfortaa/static/Comfortaa-SemiBold.ttf");
+  font-weight: 500 600;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../../../common-dependencies/fonts/Comfortaa/static/Comfortaa-Bold.ttf");
+  font-weight: 700 900;
+}
+
+:root {
+  --bs-body-bg-rgb: 39, 43, 48;
+  --bs-body-bg: #272b30;
+  --bs-body-color: #fff;
+  --bs-primary-rgb: 58, 73, 123;
+  --bs-primary: #3a497b;
+  --bs-dark-rgb: 50, 56, 62;
+  --bs-dark: #32383e;
+  --accent-color-rgb: 71, 153, 235;
+  --accent-color: #4799eb;
+  --hero-height: min(32vh, 32vw);
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  font-family: Comfortaa, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+  color: var(--bs-body-color);
+  margin: 0.5rem 1rem;
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+  text-shadow: 0 0 2px #0007;
+}
+
+.text-fg-color {
+  color: var(--bs-body-color);
+}
+
+.games .navbar {
+  margin-top: var(--hero-height);
+  margin-top: calc(var(--hero-height) - 2.5rem);
+  box-shadow: 0 0 10px 0 #1a1a1a;
+  text-transform: uppercase;
+  border-radius: 1.5rem;
+}
+
+.games .navbar .navbar-brand img {
+  margin-inline: 0.25rem;
+  border-radius: 0.5rem;
+  mix-blend-mode: lighten;
+  vertical-align: middle;
+}
+
+.games .navbar .navbar-brand a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.games .navbar .navbar-brand a:hover,
+.games .navbar .navbar-brand a:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.games .navbar .nav-link {
+  --bs-link-opacity: 1;
+  --bs-body-color: var(--bs-body-color);
+  --bs-navbar-active-color-rgb: var(--accent-color-rgb);
+  --bs-navbar-active-color: var(--accent-color);
+  --bs-nav-link-hover-color-rgb: var(--accent-color-rgb);
+  --bs-nav-link-hover-color: var(--accent-color);
+  --bs-nav-link-color: var(--bs-body-color);
+  font-size: 0.725rem;
+}
+
+.games .navbar .nav-link.active {
+  font-weight: 700;
+}
+
+.games .header {
+  background: linear-gradient(0deg, var(--bs-body-bg) 5%, transparent 25% 50%),
+    url("../images/paladins.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: var(--hero-height);
+}
+
+.games .card {
+  cursor: pointer;
+  filter: saturate(0.5);
+  transition: transform 0.5s, filter, 0.5s;
+  will-change: transform, filter;
+}
+
+.games .card:hover {
+  transform: scale(1.05);
+  filter: none;
+}
+
+.games .card:active {
+  transform: scale(0.95);
+}
+
+.game-details .btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+}
+
+/* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #33393f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  --thumb-bg-opacity: 0.7;
+  --thumb-shadow-blur: 0.25rem;
+  background: rgba(var(--bs-dark-rgb), var(--thumb-bg-opacity));
+  border-radius: 0.25rem;
+  box-shadow: 0 0 var(--thumb-shadow-blur) 0 inset #000;
+  opacity: 0.5;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  --thumb-bg-opacity: 1;
+  --thumb-shadow-blur: 0.5rem;
+}
+
+.loader-container {
+  background-color: rgba(var(--bs-body-bg-rgb), 0.85);
+  position: absolute;
+  z-index: 999999;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.loader-wrapper {
+  --side-len-size: 48px;
+  --border-width: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card .loader,
+.card .loader::after {
+  --factor: 0.75;
+  --side-len-size: calc(48px * var(--factor));
+  --border-width: calc(4px * var(--factor));
+}
+
+.card .loader-container {
+  position: absolute;
+}
+
+/* https://cssloaders.github.io/ */
+
+.loader {
+  box-sizing: border-box;
+  display: inline-block;
+  width: var(--side-len-size, 48px);
+  height: var(--side-len-size, 48px);
+  border-radius: 50%;
+  border-top: var(--border-width, 4px) solid #fff;
+  border-right: var(--border-width, 4px) solid transparent;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--side-len-size, 48px);
+  height: var(--side-len-size, 48px);
+  border-radius: 50%;
+  border-left: var(--border-width, 4px) solid #ff3d00;
+  border-bottom: var(--border-width, 4px) solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
