@@ -1,0 +1,76 @@
+:root {
+  --bs-primary-rgb: 44, 62, 80;
+  --bs-success-rgb: 26, 188, 156;
+  --bs-primary: rgb(var(--bs-primary-rgb));
+  --bs-success: rgb(var(--bs-success-rgb));
+  --bs-primary-dark: #1a252f;
+}
+
+html {
+  /* Set BG color to be shown on mobile action bar */
+  background-color: var(--bs-primary);
+  scrollbar-color: rgb(var(--bs-success-rgb), 0.5) var(--bs-primary-dark);
+}
+
+::-webkit-scrollbar {
+  background: var(--bs-primary-dark);
+  width: 0.9rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--bs-success-rgb), 0.5);
+  border: 2px solid var(--bs-primary-dark);
+}
+
+::-webkit-scrollbar-button {
+  height: 0.45rem;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-success {
+  --bs-btn-bg: rgb(var(--bs-success-rgb));
+  --bs-btn-hover-bg: rgb(var(--bs-success-rgb));
+  --bs-btn-active-bg: rgb(var(--bs-success-rgb));
+  --bs-btn-disabled-bg: rgb(var(--bs-success-rgb));
+  --bs-btn-focus-shadow-rgb: var(--bs-success-rgb);
+  --bs-btn-border-color: rgb(var(--bs-success-rgb));
+  --bs-btn-hover-border-color: rgb(var(--bs-success-rgb));
+  --bs-btn-active-border-color: rgb(var(--bs-success-rgb));
+  --bs-btn-disabled-border-color: rgb(var(--bs-success-rgb));
+}
+
+.btn {
+  transition: none;
+}
+
+.nav-link {
+  transition: none;
+}
+
+.form-floating > .form-control-plaintext ~ label::after,
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-select ~ label::after {
+  background-color: transparent;
+}
+
+.form-floating > .form-control:focus ~ label {
+  --bs-body-color-rgb: var(--bs-success-rgb);
+}
+
+.form-control:focus-visible,
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--bs-success);
+}
+
+.bg-dark-primary {
+  background-color: var(--bs-primary-dark);
+}
