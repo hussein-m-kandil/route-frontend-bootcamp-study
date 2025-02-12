@@ -1,0 +1,13 @@
+VITE_APP_NAME="FreshCart"
+VITE_AUTH_BASE=https://ecommerce.routemisr.com
+VITE_AUTH_SIGN_UP=/api/v1/auth/signup
+VITE_AUTH_SIGN_IN=/api/v1/auth/signin
+VITE_AUTH_SIGN_IN_VALIDATION=/api/v1/auth/verifyToken
+VITE_SHOP_BASE=https://ecommerce.routemisr.com
+VITE_SHOP_ALL_PRODUCTS=/api/v1/products
+VITE_SHOP_ALL_CATEGORIES=/api/v1/categories
+VITE_SHOP_USER_ORDERS=/api/v1/orders/user
+VITE_SHOP_CATEGORY=/api/v1/categories
+VITE_SHOP_WISHLIST=/api/v1/wishlist
+VITE_SHOP_CART=/api/v1/cart
+VITE_SHOP_CHECKOUT=/api/v1/orders/checkout-session

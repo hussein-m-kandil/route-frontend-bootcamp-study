@@ -1,0 +1,20 @@
+@import './assets/fonts/Encode_Sans_Expanded/encode_sans_expanded.css';
+
+@import 'tailwindcss';
+
+@theme {
+  --color-app-main: rgb(10, 173, 10);
+  --color-app-rating: rgb(255, 201, 8);
+  --color-app-light: rgb(240, 243, 242);
+}
+
+body {
+  --swiper-theme-color: var(--color-app-main);
+  font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  outline-color: var(--color-orange-400);
+}

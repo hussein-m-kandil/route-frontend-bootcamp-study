@@ -31,3 +31,4 @@ Projects I built while studying the **Front-End Web Development Bootcamp** at [*
 ### React
 
 - **Start Framework** -- [(source)](./react/start-framework/) [(live)](https://start-framework.pages.dev/)
+- **E-Commerce (final project)** -- [(source)](./react/ecommerce-route-academy-final-project) [(live)](https://ecommerce-route-academy-final-project.pages.dev/)
